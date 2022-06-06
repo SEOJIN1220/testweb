@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>"Web Client Programming"</b></h1>
+  <p>기말고사 필기노트</p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    
+    <div class="w3-container">
+      <h3><b>Study Note</b></h3>
+      
+    </div>
+
+    <div class="w3-container">
+      <p> [시맨틱 요소] 
+        <br> * w3c에 따르면 "시맨틱 웹을 사용하면 애플리케이션, 기업 및 커뮤니티에서 데이터를 공유하고 재사용할 수 있음."
+        <br>
+        <br> [스타일 가이드]
+        <br>* 소문자 요소 이름 사용
+        <br>* 모든 html 요소 닫기
+        <br>* 항상 속성 값 인용
+        <br>* 항상 이미지의 alt, 너비 및 높이 지정
+        <br>* 긴 코드 줄 피하기, 빈 줄과 들여쓰기
+        <br>* title 요소 건너 뛰지 않기
+        <br>* html,body, head 태그 생략 가능
+        <br>* 소문자 파일 이름 사용
+        <br>
+        <br>[엔티티]
+        <br>* 줄 바꿈하지 않는 공백
+        <br>* 분음 부호 결합(발음 구별 기호)
+        <br>
+        <br>[문자 집합]
+        <br>* ASCII 문자 집합 : 제어 문자 0~37(및 127) 값 사용
+        <br>* ANSI 문자 집합 : 128에서 159 사이의 값에 대한 고유한 문자 집합이 있음
+        <br>* ISO-8859-1 문자 집합 : 128에서 159 사이의 값을 사용 X
+        <br>* UTF-8 문자 집합 : 10,000개 이상의 다른 문자로 값 256에서 계속 됨
+        <br>
+        <br>[URL 인코딩] 
+        <br>* URL = 웹 주소의 다른 단어
+        <br>* 웹 브라우저는 URL을 사용하여 웹 서버에서 페이지를 요청
+        <br>* URL 인코딩 : ASCII 문자 집합 을 사용하여 인터넷을 통해서만 보낼 수 있음
+        <br>
+        <br>[html api]
+        <br>* 사용자의 지리적 위치를 얻는데 사용
+        <br>* 오류 및 거부 처리
+        <br>* getCurrentPosition 메서드 - 데이터 반환
+        <br>* Geolocation 개체 
+        <br>
+        <br>[css 개요 스타일]
+        <br>* dotted- 점선 윤곽을 정의
+        <br>* dashed- 점선 윤곽을 정의
+        <br>* solid- 실선을 정의
+        <br>* double- 이중 윤곽선 정의
+        <br>* groove- 3D 홈이 있는 윤곽을 정의
+        <br>* ridge- 3D 융기된 윤곽을 정의
+        <br>* inset- 3D 삽입 윤곽을 정의
+        <br>* outset- 3D 아웃셋 아웃라인 정의
+        <br>* none- 윤곽을 정의하지 않음
+        <br>* hidden- 숨겨진 윤곽선 정의
+        <br>
+        <br>[css 선택기]
+        <br>* 단순 선택기(이름, ID, 클래스를 기반으로 요소 선택)
+        <br>* 결합자 선택기 (요소 간의 특정 관계를 기반으로 요소 선택)
+        <br>* 유사 클래스 선택기 (특정 상태를 기반으로 요소 선택)
+        <br>* 유사 요소 선택기 (요소의 일부를 선택하고 스타일 지정)
+        <br>* 속성 선택기 (속성 또는 속성 값을 기반으로 요소 선택)
+        <br>
+        <br>[css border 스타일]
+        <br>* dotted- 점선 테두리를 정의
+        <br>* dashed- 점선 테두리를 정의
+        <br>* solid- 단색 테두리를 정의
+        <br>* double- 이중 테두리 정의
+        <br>* groove- 3D 홈 테두리를 정의. 효과는 테두리 색상 값에 따라 다름
+        <br>* ridge- 3D 융기된 테두리를 정의. 효과는 테두리 색상 값에 따라 
+        <br>* inset- 3D 삽입 테두리를 정의. 효과는 테두리 색상 값에 따라 다름
+        <br>* outset- 3D 아웃셋 테두리를 정의. 효과는 테두리 색상 값에 따라 다름
+        <br>* none- 경계를 정의하지 않음
+        <br>* hidden- 숨겨진 테두리를 정의합
+        <br>
+        <br>[css 박스모델]
+        <br>* 내용 - 텍스트와 이미지가 표시되는 상자의 내용
+        <br>* 패딩 - 콘텐츠 주변 영역을 지움. 패딩이 투명
+        <br>* 테두리 - 패딩과 콘텐츠를 둘러싸는 테두리
+        <br>* 여백 - 테두리 밖의 영역을 지움. 여백이 투명
+        <br>
+        <br>[css 드롭다운]
+        <br>* 사용자가 요소 위로 마우스를 이동할 때 나타나는 상자
+        <br>* 드롭 다운 메뉴 : 사용자가 목록에서 옵션을 선택할 수 있음
+        
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+  
+    <div class="w3-container">
+      <h3><b>Planer</b></h3>
+      <h5>기말고사 계획표, <span class="w3-opacity">20211025 임서진</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>
+
+           
+      </p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+
+    <div class="w3-container w3-white">
+      <h4><b>To Do List</b></h4>
+      <p>6/07 정적웹사이트 만들고 출판하기<br>
+        6/09 웹클라이언트 프로그래밍 기말고사<br>
+        6/16 14주차 온라인 강의 듣기<br>
+    </div>
+  </div><hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Reference</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="./image/bear.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <a href="https://www.w3schools.com/css/default.asp"><span class="w3-large">w3school css</span></a><br>
+        <span>css 언어 참고 사이트</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="./image/bear.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <a href="https://www.w3schools.com/html/default.asp"><span class="w3-large">w3school html</span></a><br>
+        <span>html 언어 참고 사이트</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="./image/bear.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <a href="https://cyber.chungwoon.ac.kr/ilos/st/course/online_list_form.acl"><span class="w3-large">e-class</span></a><br>
+        <span>웹클라이언트 프로그래밍 온라인 강의</span>
+      </li>    
+    </ul>
+  </div>
+  <hr> 
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-black w3-margin-bottom">Study</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Studynote</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
+    </p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  
+  
+</footer>
+
+</body>
+</html>
