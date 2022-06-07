@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #eda9b9;
+  color: white;
+}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>"MY STUDY NOTE"</b></h1>
+  <p>Welcome to the website of Lim seojin</p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="./image/books.jpeg" alt="Nature" style="width:100%">
+    <div class="w3-container">
+      <h3></h3>
+      <h5>Study Time : 5H, <span class="w3-opacity">June, 2022</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>When we do the best that we can, we never know what miracle is wrought in our life, or in the life of another.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+  
+    <div class="w3-container">
+      <h3><b>Planer</b></h3>
+      <h5>기말고사 계획표, <span class="w3-opacity">20211025 임서진</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>
+        <table>
+          <tr>
+            <th>SUBJECT</th>
+            <th>TO DO LIST</th>
+            <th>CHECK</th>
+          </tr>
+          <tr>
+            <td>웹클라이언트</td>
+            <td>[8주차] 시맨틱 요소, 스타일 가이드와 엔티티, 문자 집합과 URL 인코딩
+        <br>[9주차] html_form요소, html_form 속성과 웹서버 동작
+        <br>[10주차] html 입력 요소, html 그래픽, html_멀티미디어
+        <br>[12주차] css개요, css요소 선택자
+        <br>[13주차] css선택자(조합_의사 클래스), css선택자(의사요소_속성 선택자)
+        <br>[14주차] css_BORDER, css_박스모델, css_텍스트, css_드롭다운관련속성
+        <br>[기말 과제] 웹사이트 만들기 제출
+            </td>
+            <td><form action="/action_page.php">
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+              <label for="vehicle1"></label><br></td>
+              
+          </tr>
+          <tr>
+            <td>자료구조</td>
+            <td>
+        4장. 리스트
+        <br> 5장. 스택
+        <br> 6장. 큐
+        <br> 7장. 트리
+        
+            </td>
+            <td>
+        <form action="/action_page.php">
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="check">
+          <label for="vehicle1"></label><br>
+        </form> 
+            </td>
+          </tr>
+          <tr>
+            <td>서버구축및관리</td>
+            <td>6장. 디스크 관리 
+              <br>* p.413 사용자별 공간 할당, 실습12
+              <br>8장. 원격지 시스템 관리
+              <br>* 실습1~실습3(명령어와 파일)
+              <br>* 텔넷, SSH ,XRDP 서버의 개념과 특징
+            <br>9장. 네임 서버
+            <br>* 실습1~실습3(p.483~513) : 명령어와 파일
+            <br>* IP주소를 얻는 흐름(p.489~490), 흐름도(p.492)
+            <br>* 캐시전용네임서버(p493~494), 구성도(p.494)
+            <br>* 마스터네임서버(p.504~506), 구성도(p.504)
+            <br>10장. 메일 서버
+            <br>* p.536 구현도
+            <br>* 실습1~실습3(p.527~552) : 명령어와 파일
+            <br>11장. DB 서버
+            <br>* 실습1 ~ 실습3 (p575 ~ 590) : 명령어와 파일
+            <br>* DB 서버의 역할
+            <br>13장. FTP 서버
+            <br>* 실습1 (p657 ~ 667) : 명령어와 파일
+            <br>* FTP 서버의 역할, Vsftp, Proftp 
+            <br>12장. 웹 서버
+            <br>* 실습1 ~ 실습3 (p622 ~ 633) : 명령어와 파일
+            <br>* 웹서버 서버의 역할
+            <br>15장. SAMBA 서버
+            <br>*SAMBA 서버의 역할
+        
+        
+            </td>
+            <td><form action="/action_page.php">
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br><br><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br><br><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br><br><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br><br><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br><br><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br><br><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br><br><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check">
+              <label for="vehicle1"></label><br>
+            </td>
+          </tr>
+          <tr>
+            <td>데이터 베이스</td>
+            <td>05_데이터베이스 설계
+              <br>09_트랜잭션
+              <br>10_장애와 회복
+              <br>11_병행제어
+              <br>12_무결성과 보안
+              <br>
+            </td>
+            <td><form action="/action_page.php">
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check">
+              <label for="vehicle1"></label><br>
+            </td>
+        </tr>
+        <tr>
+            <td>스마트 재테크</td>
+            <td></td>
+            <td><form action="/action_page.php">
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+              <label for="vehicle1"></label><br>
+            </td>
+        </tr>
+        <tr>
+            <td>MOS1
+            <td>실전 모의고사 1회 풀기
+              <br>실전 모의고사 2회 풀기
+            </td>
+            <td><form action="/action_page.php">
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check"><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="check">
+              <label for="vehicle1"></label><br>
+            </td>
+        </tr>
+        </table>
+      </p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+  <a href="file:///C:/Users/82105/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/html5/image/everytime.jpg"><img src="./image/everytime.jpg" style="width:100%"></a>
+    <div class="w3-container w3-white">
+      <h4><b>TIME TABLE</b></h4>
+      <p>6/08 MOS1 기말<br>
+      6/09 웹클라이언트 기말<br>
+      6/13 데이터베이스 기말<br>
+      6/14 서버구축및관리 기말<br>
+      6/16 자료구조 기말<br>
+      6/21 스마트재테크 기말
+   </p>
+    </div>
+  </div><hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>study notes</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+    <li class="w3-padding-16">
+        <img src="./image/w3school.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+       <a href="https://www.w3schools.com/"><span class="w3-large">웹클라이언트</span></a><br>
+        <span>Web Client Programming</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="./image/database.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <a href="./studynote.data.index.html"><span class="w3-large">데이터베이스</span></a><br>
+        <span>Data Base</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="./image/visual.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <a href="file:///C:/Users/82105/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/html5/studynote.structure.index.html"><span class="w3-large">자료구조</span></a><br>
+        <span>Data Structure</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="./image/VMware.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <a href="file:///C:/Users/82105/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/html5/studynote.server.index.html"><span class="w3-large">서버구축및관리</span></a><br>
+        <span>Server Construction And Management</span>
+      </li>  
+      
+    </ul>
+  </div>
+  <hr> 
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-black w3-margin-bottom">Study</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Studynote</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Web Client Programming</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Data Base</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"></span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Data Structure</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Server construction and management</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">
+    </p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  
+</footer>
+
+</body>
+</html>
