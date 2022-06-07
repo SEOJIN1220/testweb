@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>"Data Base"</b></h1>
+  <p>기말고사 필기노트</p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    
+    <div class="w3-container">
+      <h3><b>Study Note</b></h3>
+      
+    </div>
+
+    <div class="w3-container">
+      <p>[7장] 데이터베이스 설계
+        <br>* 데이터베이스 생명주기 : 요구 조건 분석 - 설계 단계 - 구현 단계 - 운영 단계 - 감시와 개선 단계
+        <br>* 데이터베이스 설계 단계 : 요구 조건 분석(시스템의 운영상태 등을 분석하고 사용자들의 요구사항에 대한 분석까지 포함하는 단계) - 개념적 설계(DBMS에 독립적이고 고차원적인 표현 기법으로 기술) - 논리적 설계 - 물리적 설계 - 구현
+        <br>* 엔티티 : 업무의 관심 대상이 되는 정보를 갖고 있거나, 그에 대한 정보를 관리할 필요가 있는 유형
+        <br>* 주 식별자 : 엔티티에 소속된 인스턴스들을 구분하는 기준이 되는 속성
+        <br>* 관계 : 두 엔티티 타입 사이의 관계를 의미, 업무의 흐름을 제대로 파악해야만 관계 도출
+        <br>* 외래식별자 : 부서와 사원 엔티티 간의 관계 도출
+        <br>* 논리적 데이터 모델 : 데이터베이스 관리 시스템의 종류에 따라 관계 데이터 모델, 네트워크 데이터 모델, 계층 데이터 모델
+        <br>* 다이어그램을 릴레이션 스키마로 변환하는 규칙 : 규칙1. 모든 개체는 릴레이션으로 변환한다 / 규칙2. 다대다 관계에서 관계는 릴레이션으로 변환한다. / 규칙3-1. 일반적인 일대다 관계는 외래키로 표현 / 규칙3-2. 약한 개체가 참여하는 일대다 관계는 외래키를 포함하여 기본키로 지정 / 규칙4. 일대일 관계는 외래키로 표현 / 규칙5. 다중 값 속성은 릴레이션으로 변환
+        <br>[9장] 트랜잭션
+        <br>* 트랜잭션 : 데이터베이스 내에서 하나의 그룹으로 처리해야 하는 명령문들을 모아놓은 작업 단위
+        <br>* 트랜잭션의 개념 : 논리적인 작업의 단위, 하나의 작업을 수행하는데 필요한 데이터베이스 연산들을 모아놓은 것, 작업 수행에 필요한 SQL문들의 모임, 장애 발생 시 복구 잡업이나 병행 제어 작업을 위한 중요한 단위로 사용됨, 데이터베이스의 무결성과 일관성을 보장하기 위해 작업 수행에 필요한 연산드릉ㄹ 하나의 트랜잭션으로 제대로 정의하고 관리해야 함
+        <br>* 트랜잭션 특징 : Atomicity(원자성), Consistency(일관성), Isolation(격리성/고립성), Durability(영속성/지속성)
+        <br>* commit 연산 : 트랜잭션이 성공적으로 수행되었음을 선언(작업 완료)
+        <br>* rollback 연산 : 트랜잭션을 수행하는 데 실패했음을 선언(작업 취소)
+        <br>* 활동 : 트랜잭션이 Begin_transcation으로부터 실행을 시작했거나 현재 실행 중인 상태를 의미
+        <br>* 부분 완료 : 트랜잭션이 마지막 명령문을 실행시킨 직후의 상태를 의미
+        <br>* 실패 : 트랜잭션 실행 중에 장애나 오류가 발생하여 정상적인 실행을 더 이상 할 수 없는 상태를 의미
+        <br>* 철회 : 트랜잭션 실행에 실패하여 ROLLBACK 연산을 수행한 상태를 의미
+        <br>* 완료 : 트랜잭션 실행이 성공적으로 완료되어 COMMIT 연산을 수행한 상태를 의미
+        <br>[10장] 장애와 회복
+        <br>* 시스템 장애 : 하드웨어의 잘못된 작동으로 메인 메모리에 저장되어 있는 정보 손실, 교착 상태의 발생으로 더 이상 트랜잭션 작업이 수행 될 수 없는 상황
+        <br>* 미디어 장애 : 디스크 블록 내에 있는 정보는 데이터 전송 도중 디스크 헤드 손상이나 고장으로 인해, 저장 장치 내에 있는 정보가 일부 또는 전부 손상될 수 있는 상태 / 휘발성 저장 장치, 비휘발성 저장 장치, 안전 저장 장치로 나뉨
+        <br>* 회복 : 데이터베이스를 장애가 발생했던 이전의 상태로 복구시켜서 일관된 데이터베이스 상태를 만드는 것
+        <br>* REDO(T_01) : 트랜잭션 T_01에 의해 변경된 모든 데이터 항목들을 로그 파일에
+        있는 변경 이후 값(new value)으로 대체
+        <br>* UNDO(T_01) : 트랜잭션 T_01에 의해 변경된 모든 데이터 항목들을 로그 파일에
+        있는 변경 이전 값(old value)으로 대체
+        <br>* 지연 갱신 회복 기법 : 트랜잭션이 부분 완료될 때까지 모든 변경 내용에 대해 데이터베이스 갱신을 지연시키고, 로
+        그 파일에만 저장하는 것, UNDO 연산이 필요 없게 되며 REDO 연산만 수행
+        <br>* 즉시 갱신 회복 기법 : 트랜잭션 연산 도중에 데이터 변경 연산이 발생할 때마다 데이터 변경
+        결과를 즉시 데이터베이스 내에 반영하는 기법
+        <br>* 검사시점(Checkpoint) 회복 기법 : 로그는 그대로 기록 유지하면서, 회복 관리자가 정하는 일정한 시간 간격으로 검사시점을 생
+        성하는 것
+        <br>* 미디어 회복 : 1. 주기억장치에 있는 모든 로그 레코드를 안전 저장 장치에 기록
+        2. 트랜잭션 수행 중에 변경된 버퍼 내의 내용을 모두 디스크로 기록
+        3. 데이터베이스의 내용을 안전 저장 장치에 기록
+        4. 로그 레코드 <dump>를 안전 저장 장치에 출력시켜 덤프를 표시
+        <br>[11장] 병행제어 
+        <br>* 병행 제어 : 다중 사용자 환경에서 둘 이상의 트랜잭션이 동시에 접속하여 해당 연산을 수행할 때, 문제점이 전혀 발생하지 않도록 트랜잭션의 수행을 적절히 제어해 주는 것
+        <br>* 갱신 분실 : 하나의 트랜잭션이 갱신한 내용을 다른 트랜잭션이 덮어씀으로써 갱신이 무효화가 되는 것을 의미
+        <br>* 모순성 : 다른 트랜잭션들이 해당 항목 값을 갱신하는 동안 한 트랜잭션이 두 개의 항목 값 중 어떤 것은 갱신되기 전의 값을 읽고, 또 다른 것은 갱신된 후의 값을 읽게 되어 데이터의 불일치가 발생하는 상황
+        <br>* 연쇄 복귀 : 한 트랜잭션이 데이터를 갱신한 다음 실패하여 rollback 연산을 수행하는 과정에서, 갱신과 rollback 연산을 실행하고 있는 사이에 해당 데이터를 읽어서 사용할 때 발생할 수 있는 문제
+        <br>* 로킹 기법 : 트랜잭션들이 동일한 데이터 항목에 대해 임의적인 병행 접근을 하지 못하도록 제어하는 것 (공용로크 / 전용로크)
+        <br>* 타임스탬프 순서 기법 : 시스템에서 생성하는 고유 번호인 타임스탬프(timestamp)를 트랜잭션에 부여하여 실행함으로써, 직렬스케줄의 결과와 항상 같도록 보장하는 것
+        <br>* [12장] 무결성과 보안
+        <br>* 데이터의 무결성 : 데이터를 결함이 없도록 보장받는 것으로, 데이터의 정확성을 의미
+        <br>* 무결성 규정을 정의하기 위한 4가지 요소 : 무결성 규정 이름 정의, 검사해야 할 시점, 무결성 제약조건, 제약조건을 위반했을 때, 취해야 하는 행동
+        <br>* 트리거 : INSERT, DELETE, UPDATE와 같은 변경 연산이 발생할 때마다 명시된 조건을 검토하여 그에 맞는 절차를 수행하게 되는 사용자 정의문
+        <br>* 주장 : 조건이 만족되지 않을 경우 변경 연산문의 수행을 거부하는 것
+        <br>* 데이터 무결성 제약 조건 : 테이블에 부적절한 자료가 입력되는 것을 방지하기 위해서 테이블을 생성할 때 각 칼럼에 대해서 형식 하는 여러가지 규칙
+        <br>* 기본키 제약 조건 : 과정 번호 칼럼이 반드시 입력되고 유일한 값만을 가질 수 있도록 하는 다양한 무결성 제약 조건들 중의 한 가지
+        <br>* NOT NULL을 명시 : SQL 칼럼 값으로 널 값을 허용하기 때문에 만일 특정 칼럼에 널 값을 허용하지 않도록 하려면 제약조건
+        <br>* 기본키 : 과정(COURSE) 테이블에서 과정들을 구분하기 위해서 과정 번호는 널 값을 저장할 수 없음
+        <br>* 제약 조건 5가지 : NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECk
+        <br>* 데이터베이스 보안의 유형 : 물리적 측면(자연 재해 및 시스템의 직/간적접인 손상 등을 주는 위험으로부터 데이터베이스를 보호하는 것), 권한 관리 측면(허가된 특정 사용자만이 허가된 권한을 가지고 데이터
+        베이스에 접근할 수 있도록 통제하는 것), 운영 관리 측면(데이터베이스의 무결성을 최대한 보호하기 위하여 무결성 규정을 정의하고 명시한)
+        <br>* 물리적 환경에 대한 보안 : 자연 재해처럼 데이터베이스에 물리적 손실을 발생시키는 위험으로부터 데이터베이스를 보호
+        <br>* 권한 관리를 통한 보안 : 접근이 허락된 사용자만 데이터베이스를 사용하도록 보호
+        <br>* 운영 관리를 통한 보안 : 접근이 허락된 사용자가 권한 내에서 데이터베이스를 사용하는 동안 데이터 무결성을 유지하도록 제약조건을 정의하고 위반하지 않도록 통제
+        <br>* 데이터 암호화 기법 : 평문을 암호문으로 변형할 떄 사용하는 방법
+        <br>* 비밀키(대칭키) 암호화 : 암호화키와 복호화키가 동일한 것
+        <br>* 공개키(비대칭키) 암호화 : 암호화키와 복호화키가 다름
+        <br>* 데이터 암호화 표준(DES) : 미국 정보가 일반 대중이 사용하도록 개발한 암호화 기법
+      
+
+
+
+      </p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+  
+    <div class="w3-container">
+      <h3><b>Planer</b></h3>
+      <h5>기말고사 계획표, <span class="w3-opacity">20211025 임서진</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>
+
+           
+      </p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+
+    <div class="w3-container w3-white">
+      <h4><b>To Do List</b></h4>
+      <p>6/06 13주차 과제 제출<br>
+        6/12 14주차 온라인 강의 듣기<br>
+        6/13 데이터베이스 기말고사
+    </div>
+  </div><hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Reference</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="./image/bear.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <a href="https://cyber.chungwoon.ac.kr/ilos/st/course/lecture_material_list_form.acl"><span class="w3-large">data base pdf</span></a><br>
+        <span>데이터베이스 강의자료</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="./image/bear.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <a href="https://cyber.chungwoon.ac.kr/ilos/st/course/online_list_form.acl"><span class="w3-large">e-class</span></a><br>
+        <span>데이터베이스 온라인 강의</span>
+      </li>    
+    </ul>
+  </div>
+  <hr> 
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-white">
+      <p><span class="w3-tag w3-black w3-margin-bottom">Study</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Studynote</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Web Client Programming</span>
+        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Data Base</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"></span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Data Structure</span>
+        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Server construction and management</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">
+      </p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>
